@@ -24,3 +24,8 @@ function RandomSheriff() {
     Player.Damage.FriendlyFire.Value = true;
     Player.Damage.Damage.Value = true;
 }
+
+function RandomPersonal() {
+    RandomSheriff();
+    RandomMurder();
+}

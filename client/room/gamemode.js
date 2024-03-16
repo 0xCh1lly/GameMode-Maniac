@@ -1,6 +1,14 @@
 import { DisplayValueHeader } from 'pixel_combats/basic';
 import { Game, Players, Inventory, LeaderBoard, BuildBlocksSet, Teams, Damage, BreackGraph, Ui, Properties, GameMode, Spawns, Timers, TeamsBalancer } from 'pixel_combats/room';
-import * as teams from './TeamCreate.js';
+import * from "./TeamCreate.js";
+import * from "./Libray.js";
+
+
+const LeaderBoard_Time = 10;
+const PersonalTime = 30;
+const StartTime = 10;
+const SleepTime = 60;
+const EndTime = 10;
 
 
 
