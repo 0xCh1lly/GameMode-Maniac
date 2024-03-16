@@ -1,0 +1,23 @@
+{
+    "Name": "",
+    "Description": "",
+    "StartClientVersion": 532,
+    "MapFilter": {
+        "IsBlank": false,
+        "HasParcourEnd": false
+    },
+    "MapLists": [
+        {
+            "MapListId": 324,
+            "Name": "<b>Official Maps | Maniac</b>"
+        },
+        {
+            "MapListId": 581
+        }
+    ],
+    "Parameters": {
+        "Bool": [
+            {}
+        ]
+    }
+}
