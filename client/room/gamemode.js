@@ -1,8 +1,12 @@
-import { DisplayValueHeader } from 'pixel_combats/basic';
+import { DisplayValueHeader, Color } from 'pixel_combats/basic';
 import { Game, Players, Inventory, LeaderBoard, BuildBlocksSet, Teams, Damage, BreackGraph, Ui, Properties, GameMode, Spawns, Timers, TeamsBalancer } from 'pixel_combats/room';
-import * from "./TeamCreate.js";
 import * from "./Libray.js";
 
+
+const PlayerTeam_Color = new Color(1, 1, 1, 0);
+const PlayerTeam_DisplayName = "PlayerTeam";
+const PlayerTeam_Name = "<b>Игроки\nDevelopers: ch1lly, mak</b>";
+const PlayerTeam_SpawnPoint = 1;
 
 const LeaderBoard_Time = 10;
 const MaxRounds_Count = 6;
@@ -14,6 +18,11 @@ const EndTime = 10;
 const StateProp = Properties.GetContext().Get("StateProp");
 const RoundProp = Properties.GetContext().Get("RoundProp");
 const MainTimer = Timers.GetContext().Get("MainTimer");
+
+
+Teams.Add(PlayerTeam_Name, PlayerTeam_DisplayName, PlayerTeam_Color);
+const PlayerTeam = Teams.Get(PlayerTeam_Name);
+PlayerTeam.Spawns.SpawnPointsGroups.Add(PlayerTeam_SpawnPoint);
 
 
 MainTimer.Timers.Add(() => {
@@ -39,7 +48,6 @@ MainTimer.Timers.Add(() => {
     }
 });
 
-
 function SetStateStart() {
     StateProp.Value = "Start";
     MainTimer.Restart(StartTime);
@@ -50,7 +58,7 @@ function SetStateSleep() {
     RoundProp.Value++;
     MainTimer.Restart(SleepTime);
 
-    if (RoundProp > MaxRounds_Count);
+    if (RoundProp > MaxRounds_Count) StateProp.Value = "End";
 }
 
 function SetStatePersonal() {
