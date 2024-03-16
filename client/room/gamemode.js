@@ -58,7 +58,7 @@ function SetStateSleep() {
     RoundProp.Value++;
     MainTimer.Restart(SleepTime);
 
-    if (RoundProp > MaxRounds_Count) StateProp.Value = "End";
+    if (RoundProp.Value > MaxRounds_Count) StateProp.Value = "End";
 }
 
 function SetStatePersonal() {
