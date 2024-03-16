@@ -8,7 +8,7 @@ function RandomMurder() {
 }
 
 function RandomSheriff() {
-    const Index = Math.floor(Math.random() * Players.Cotrue;
+    const Index = Math.floor(Math.random() * Players.Count);
     const Player = Players.All[Index];
 
     if (Player.Properties.Get('Murder').Value) return RandomSheriff();
