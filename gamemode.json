@@ -1,6 +1,6 @@
 {
-    "Name": "",
-    "Description": "",
+    "Name": "<b>Maniac | [ v2.0 ]</b>",
+    "Description": "<b>Перед началом игры прочитайте правила на GitHub!</b>",
     "StartClientVersion": 532,
     "MapFilter": {
         "IsBlank": false,
