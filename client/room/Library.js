@@ -2,7 +2,7 @@ import { DisplayValueHeader } from 'pixel_combats/basic';
 import { Game, Players, Inventory, LeaderBoard, BuildBlocksSet, Teams, Damage, BreackGraph, Ui, Properties, GameMode, Spawns, Timers, TeamsBalancer } from 'pixel_combats/room';
 
 
-function RandomMurder() {
+export function RandomMurder() {
     const Index = Math.floor(Math.random() * Players.Count);
     const Player = Players.All[Index];
 
@@ -13,7 +13,7 @@ function RandomMurder() {
     Player.Damage.Damage.Value = true;
 }
 
-function RandomSheriff() {
+export function RandomSheriff() {
     const Index = Math.floor(Math.random() * Players.Count);
     const Player = Players.All[Index];
 
@@ -25,7 +25,7 @@ function RandomSheriff() {
     Player.Damage.Damage.Value = true;
 }
 
-function RandomPersonal() {
+export function RandomPersonal() {
     RandomSheriff();
     RandomMurder();
 }

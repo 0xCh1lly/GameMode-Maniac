@@ -1,7 +1,7 @@
 try {
     import { DisplayValueHeader, Color } from 'pixel_combats/basic';
     import { Game, Players, Inventory, LeaderBoard, BuildBlocksSet, Teams, Damage, BreackGraph, Ui, Properties, GameMode, Spawns, Timers, TeamsBalancer } from 'pixel_combats/room';
-    import * from "./Libray.js";
+    import * from './Libray.js';
 
 
     const PlayerTeam_Color = new Color(1, 1, 1, 0);
