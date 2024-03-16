@@ -4,14 +4,20 @@ import { Game, Players, Inventory, LeaderBoard, BuildBlocksSet, Teams, Damage, B
 
 function RandomMurder() {
     const Index = Math.floor(Math.random() * Players.Count);
-    Players.All[Index].Properties.Get("Murder").Value = true;
+    const Player = Players.All[Index];
+
+    if (Player.Properties.Get("Sheriff").Value) return RandomMurder();
+    
+    Player.Properties.Get("Murder").Value = true;
+    Player.Damage.FriendlyFire.Value = true;
+    Player.Damage.Damage.Value = true;
 }
 
 function RandomSheriff() {
     const Index = Math.floor(Math.random() * Players.Count);
     const Player = Players.All[Index];
 
-    if (Player.Properties.Get('Murder').Value) return RandomSheriff();
+    if (Player.Properties.Get("Murder").Value) return RandomSheriff();
     
     Player.Properties.Get("Sheriff").Value = true;
     Player.Inventory.Secondary.Value = true;
