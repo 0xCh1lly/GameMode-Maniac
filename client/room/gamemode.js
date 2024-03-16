@@ -8,4 +8,5 @@ const Inventory = Inventory.GetContext();
 Inventory.Main.Value = false;
 Inventory.Secoundary.Value = false;
 Inventory.Melee.Value = true;
+Inventory.Explosive.Value = false;
 Inventory.Build.Value = false;
