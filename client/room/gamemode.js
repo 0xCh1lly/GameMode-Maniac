@@ -25,7 +25,7 @@ const PlayerTeam = Teams.Get(PlayerTeam_Name);
 PlayerTeam.Spawns.SpawnPointsGroups.Add(PlayerTeam_SpawnPoint);
 
 
-MainTimer.Timers.Add(() => {
+MainTimer.OnTimer.Add(() => {
     switch (StateProp) {
         case "Loading":
             SetStateStart();
