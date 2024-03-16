@@ -3,14 +3,9 @@ import { Game, Players, Inventory, LeaderBoard, BuildBlocksSet, Teams, Damage, B
 import * as teams from './TeamCreate.js';
 
 
-const WaitingTime = 10;
-const ChoiceTime = 10;
-const GameTime = 600;
 
-const StateProp = Properties.GetContext().Get("StateProp");
-const MainTimer = Timers.GetContext().Get("MainTimer");
-
-
-BreackGraph.OnlyPlayerBlockDmg = GameMode.Parameters.GetBool("PartialDesruction");
-BreackGraph.WeakBlocks = GameMode.Parameters.GetBool("LoosenBlocks");
-Damage.FriendlyFire = GameMode.Parameters.GetBool("FriendlyFire");
+const Inventory = Inventory.GetContext();
+Inventory.Main.Value = false;
+Inventory.Secoundary.Value = false;
+Inventory.Melee.Value = true;
+Inventory.Build.Value = false;
