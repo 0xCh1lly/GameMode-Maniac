@@ -1,9 +1,8 @@
+import { DisplayValueHeader, Color } from 'pixel_combats/basic';
+import { Game, Players, Inventory, LeaderBoard, BuildBlocksSet, Teams, Damage, BreackGraph, Ui, Properties, GameMode, Spawns, Timers, TeamsBalancer } from 'pixel_combats/room';
+import * as UTILS from './Libray.js';
+
 try {
-    import { DisplayValueHeader, Color } from 'pixel_combats/basic';
-    import { Game, Players, Inventory, LeaderBoard, BuildBlocksSet, Teams, Damage, BreackGraph, Ui, Properties, GameMode, Spawns, Timers, TeamsBalancer } from 'pixel_combats/room';
-    import * from './Libray.js';
-
-
     const PlayerTeam_Color = new Color(1, 1, 1, 0);
     const PlayerTeam_DisplayName = "PlayerTeam";
     const PlayerTeam_Name = "<b>Игроки\nDevelopers: ch1lly, mak</b>";
@@ -82,7 +81,7 @@ try {
     Inventory.Build.Value = false;
 
 } catch (error) {
-    Teams.Add(error, "ErrorTeam", { r: 1, g: 1, b: 1 });
+    Teams.Add('error', "ErrorTeam",new Color(0,0,0,0));
 }
 
 
